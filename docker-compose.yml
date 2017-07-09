@@ -1,0 +1,14 @@
+version: '2'
+services:
+  squid:
+    build: .
+    image: squid
+    restart: always
+    ports:
+      - "3128:3128"
+    volumes:
+      - squid_data:/var/cache/squid
+      - ./config:/config
+
+volumes:
+  squid_data:

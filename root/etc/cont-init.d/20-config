@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for file in /config/*; do
+ cp $file /etc/squid/$(basename $file)
+done
